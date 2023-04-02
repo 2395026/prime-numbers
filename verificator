@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        int num = 0;
+
+
+        System.out.println("");
+        System.out.println("+++PRIME NUMBER VERIFICATOR+++");
+        System.out.println("");
+
+
+        Scanner scan = new Scanner(System.in);
+
+
+
+        //beginning the loop
+        while (num != 999) {
+            System.out.println("Write a number to check if it's a prime number: \n\nAt any moment, type 999 to exit the application.");
+            num = scan.nextInt();
+            int counter = 0;
+
+            //exit the program
+            if (num == 999) {
+                System.out.println("Thank you for using our software!");
+                break;
+            }
+            //loop to pass through dividers
+            for (int i = 1; i <= num; i++) {
+                //if rest is 0, save in var counter
+                if (num % i == 0) {
+                    counter++;
+                }
+            }
+            // if counter var is 2, number is a prime
+                if (counter == 2){
+                    System.out.println(num+" IT IS a prime number...");
+            System.out.println("");}
+            // else, not a prime number
+                else{
+                    System.out.println(num+" IT IS NOT a prime number...");
+            System.out.println("");}
+
+                //back to loop and restart
+        }
+    }
+}
